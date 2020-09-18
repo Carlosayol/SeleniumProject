@@ -18,7 +18,7 @@ class FindbyLinkText():
         elementbyPartialLinkText = driver.find_element_by_partial_link_text("Sign")
 
         if elementbyPartialLinkText is not None:
-            print("Existe el css selector")
+            print("Existe el partial link text")
         else:
             print("Super F")
 
