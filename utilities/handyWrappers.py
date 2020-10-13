@@ -30,7 +30,7 @@ class HandyWrappers():
             locatorType = locatorType.lower()
             byType = self.getByType(locatorType)
             element = self.driver.find_element(byType, locator)
-            print("Element Found")
+            print("Element found")
         except:
             print("Element not found")
         return element
@@ -39,7 +39,7 @@ class HandyWrappers():
         try:
             element = self.driver.find_element(byType, locator)
             if element is not None:
-                print("Element Found")
+                print("Element found")
                 return True
             else: return False
         except:
@@ -50,9 +50,9 @@ class HandyWrappers():
         try:
             elements = self.driver.find_elements(byType, locator)
             if len(elements)>0:
-                print("Existen Elementos")
+                print("Element found")
                 return True
             else: return False
         except:
-            print("No hay Elementos")
+            print("Element not found")
             return False
