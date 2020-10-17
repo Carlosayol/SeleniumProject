@@ -41,6 +41,19 @@ class CalendarSelection():
         dparting = driver.find_element(By.ID,"d1-btn")
         dparting.click()
 
+        #Getting dates
+        monthdep = driver.find_element(By.XPATH,"//div[@class='uitk-new-date-picker-month'][position()=1]")
+        allValidDates = dparting.find_elements(By.XPATH,"//button[not(@disabled)]")
+
+        for date in allValidDates:
+            if date.get_attribute('data-day') == '23':
+                date.click()
+                driver.find_element(By.XPATH,"//button[@data-stid='apply-date-picker']").click()
+                break
+
+        time.sleep(3)
+
+        driver.quit()
 
 
 fn = CalendarSelection()
