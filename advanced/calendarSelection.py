@@ -43,7 +43,7 @@ class CalendarSelection():
 
         #Getting dates
         monthdep = driver.find_element(By.XPATH,"//div[@class='uitk-new-date-picker-month'][position()=1]")
-        allValidDates = dparting.find_elements(By.XPATH,"//button[not(@disabled)]")
+        allValidDates = monthdep.find_elements(By.XPATH,"//button[not(@disabled)]")
 
         for date in allValidDates:
             if date.get_attribute('data-day') == '23':
