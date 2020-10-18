@@ -4,17 +4,16 @@ import time
 class screenShots():
 
     def test(self):
-        baseUrl = "https://courses.letskodeit.com/"
+        baseUrl = "http://betoy.com.co/inicio-sesion"
         driver = webdriver.Chrome(executable_path="../basic/driver/chromedriver.exe")
         driver.maximize_window()
         driver.get(baseUrl)
         driver.implicitly_wait(4)
 
         #Intentado logear (fallara)
-        driver.find_element(By.XPATH,"//a[contains(text(),'Sign In')]").click()
         driver.find_element(By.ID,"email").send_keys("abc@hotmail.com")
-        driver.find_element(By.ID,"password").send_keys("asereje")
-        driver.find_element(By.XPATH,"//div[@class='col-xs-12 col-md-12']//input").click()
+        driver.find_element(By.ID,"passwd").send_keys("asereje")
+        driver.find_element(By.ID,"SubmitLogin").click()
 
         time.sleep(5)
 
