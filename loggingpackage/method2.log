@@ -1,0 +1,4 @@
+10/26/2020 18:41:10: INFO: info message at Line 18
+10/26/2020 18:41:10: WARNING: warning message at Line 19
+10/26/2020 18:41:10: ERROR: error message at Line 20
+10/26/2020 18:41:10: CRITICAL: critical message at Line 21
