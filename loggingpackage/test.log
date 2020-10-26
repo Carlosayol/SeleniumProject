@@ -1,3 +1,10 @@
-WARNING:root:warning message
-INFO:root:info message
-ERROR:root:error message
+10/26/2020 06:14:27 PM - LoggerDemoConf - DEBUG - debug message
+10/26/2020 06:14:27 PM - LoggerDemoConf - INFO - info message
+10/26/2020 06:14:27 PM - LoggerDemoConf - WARNING - warning message
+10/26/2020 06:14:27 PM - LoggerDemoConf - ERROR - error message
+10/26/2020 06:14:27 PM - LoggerDemoConf - CRITICAL - critical message
+10/26/2020 06:14:54 PM - LoggerDemoConf - DEBUG - debug message
+10/26/2020 06:14:54 PM - LoggerDemoConf - INFO - info message
+10/26/2020 06:14:54 PM - LoggerDemoConf - WARNING - warning message
+10/26/2020 06:14:54 PM - LoggerDemoConf - ERROR - error message
+10/26/2020 06:14:54 PM - LoggerDemoConf - CRITICAL - critical message
