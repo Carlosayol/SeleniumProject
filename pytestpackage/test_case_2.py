@@ -2,12 +2,12 @@ import pytest
 
 @pytest.fixture()
 def setUp():
-    print("Una vez antes por metodo")
+    print("case 2 setup")
     yield
-    print("Una vez despues por metodo")
+    print("case 2 tear down")
 
 def test_methodA(setUp):
-    print("Running method A")
+    print("Running case 2 method A")
 
 def test_methodB(setUp):
-    print("Running method B")
+    print("Running case 2 method B")
