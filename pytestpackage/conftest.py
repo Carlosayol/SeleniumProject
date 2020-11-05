@@ -1,13 +1,15 @@
 import pytest
 
+#Function level
 @pytest.fixture()
 def setUp():
-    print("Running conftest setup")
+    print("Running method level setup")
     yield
-    print("Running conftest tear down")
+    print("Running method level tear down")
 
+#Module level
 @pytest.fixture(scope="module")
 def ModulesetUp():
-    print("Running conftest setup for module")
+    print("Running module level setup")
     yield
-    print("Running conftest tear down for module")
+    print("Running module level tear down")
