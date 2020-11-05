@@ -8,7 +8,7 @@ def setUp():
     print("Running method level tear down")
 
 #Module level
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="class")
 def ModulesetUp(browser, osType):
     print("Running module level setup")
     if browser=="chrome":
