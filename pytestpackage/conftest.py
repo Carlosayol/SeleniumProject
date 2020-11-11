@@ -9,13 +9,18 @@ def setUp():
 
 #Module level
 @pytest.fixture(scope="class")
-def ModulesetUp(browser, osType):
+def ModulesetUp(request, browser, osType):
     print("Running module level setup")
     if browser=="chrome":
+        value = 10
         print("Running test on Chrome")
     else:
+        value = 20
         print("Running test on FF")
-    yield
+    if request.cls is not None:
+        request.cls.value = value
+
+    yield value
     print("Running module level tear down")
 
 def pytest_addoption(parser):
