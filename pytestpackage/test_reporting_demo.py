@@ -1,6 +1,9 @@
 import pytest
 from pytestpackage.class_to_test import ClassDemoTest
 
+
+#py.test -s -v pytestpackage/test_conftest_3.py --browser chrome --html=htmlreport.html
+
 @pytest.mark.usefixtures("ModulesetUp","setUp")
 class TestReportingDemo():
 
