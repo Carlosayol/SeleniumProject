@@ -5,14 +5,13 @@ import time
 class switchToFrame():
 
     def test(self):
-        baseUrl = "https://letskodeit.teachable.com/p/practice"
+        baseUrl = "https://courses.letskodeit.com/courses/learn-python3-from-scratch/buy"
         driver = webdriver.Chrome(executable_path="../basic/driver/chromedriver.exe")
         driver.maximize_window()
         driver.get(baseUrl)
         driver.implicitly_wait(3)
 
-        element = driver.find_element(By.XPATH,"//legend[contains(text(),'iFrame Example')]")
-        element.location_once_scrolled_into_view
+        driver.execute_script("window.scrollBy(0,1000);")
 
         time.sleep(2)
 
@@ -20,15 +19,15 @@ class switchToFrame():
         #driver.switch_to.frame("courses-iframe")
 
         #Usando posicion en arreglo"
-        driver.switch_to.frame(0)
+        driver.switch_to.frame(1)
 
-        searchbox = driver.find_element(By.ID, "search-courses")
-        searchbox.send_keys("python")
+        credit_input = driver.find_element(By.NAME, "cardnumber")
+        credit_input.send_keys("1111111111111111")
 
         time.sleep(2)
 
-        driver.switch_to.default_content()
-        driver.execute_script("window.scrollBy(0,-1000)")
+        #driver.switch_to.default_content()
+        #driver.execute_script("window.scrollBy(0,-1000)")
 
         time.sleep(2)
         driver.quit()
