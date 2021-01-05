@@ -19,17 +19,22 @@ class switchToFrame():
         #driver.switch_to.frame("courses-iframe")
 
         #Usando posicion en arreglo"
-        driver.switch_to.frame(1)
+        #driver.switch_to.frame(1)
 
-        credit_input = driver.find_element(By.NAME, "cardnumber")
-        credit_input.send_keys("1111111111111111")
+        #credit_input = driver.find_element(By.NAME, "cardnumber")
+        #credit_input.send_keys("1111111111111111")
+
+        #driver.switch_to.default_content()
+
+        driver.switch_to.frame(3)
+
+        credit_input2 = driver.find_element(By.NAME, "exp-date")
+        credit_input2.send_keys(1234)
 
         time.sleep(2)
 
         #driver.switch_to.default_content()
         #driver.execute_script("window.scrollBy(0,-1000)")
-
-        time.sleep(2)
         driver.quit()
 
 
