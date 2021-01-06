@@ -26,10 +26,15 @@ class switchToFrame():
 
         #driver.switch_to.default_content()
 
-        driver.switch_to.frame(3)
+        #driver.switch_to.frame(4)
 
-        credit_input2 = driver.find_element(By.NAME, "exp-date")
-        credit_input2.send_keys(1234)
+        #credit_input2 = driver.find_element(By.NAME, "exp-date")
+        #credit_input2.send_keys(1234)
+
+        enroll_buttons = driver.find_elements(By.XPATH,"//div[@class='stripe-outer ']//button")
+        enroll_button = enroll_buttons[2]
+        enroll_button.click()
+        #print(enroll_buttons)
 
         time.sleep(2)
 
